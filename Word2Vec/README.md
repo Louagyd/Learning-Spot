@@ -1,1 +1,1 @@
-the word to vec project
+# Word2Vec
