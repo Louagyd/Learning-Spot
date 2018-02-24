@@ -47,7 +47,6 @@ optimizer = tf.train.AdamOptimizer(0.001).minimize(loss)
 
 
 #Training process
-train_centers, train_labels = data.generate_batch(traindata, skip_window, batch_size = (len(traindata)- 2*skip_window - 1)*skip_size, num_skip= skip_size, skip_window= skip_window)
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     num_epochs = 50
@@ -58,8 +57,6 @@ with tf.Session() as sess:
                           target: labels}
             sess.run(optimizer, feed_dict=batch_dict)
         print('EPOCH:   ', epoch+1,'/', num_epochs)
-        print(sess.run(loss, feed_dict={center: train_centers,
-                                        target: train_labels}))
 
     final_embeddings_normal = normalized_embeddings.eval()
     final_embeddings = embeddings.eval()
