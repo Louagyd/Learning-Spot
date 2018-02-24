@@ -49,5 +49,5 @@ the **most_similar_to_word** function that is defined in the **AnalyseModel.py**
 another good intuition of this embedding is the scatter plot of words embedded in embedding space. first we should reduce the dimension of embedding space to 2 using **PCA**. then we can see the scatter plot of each word in this 2-dimensional space.
 as you can see, similar words are close to eachother.
 
-
+[scatter plot](Word2Vec.jpg)
 
