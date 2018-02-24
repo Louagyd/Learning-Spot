@@ -45,8 +45,9 @@ loss = tf.reduce_mean(
                    num_classes=vocab_size))
 optimizer = tf.train.AdamOptimizer(0.001).minimize(loss)
 
-train_centers, train_labels = data.generate_batch(traindata, skip_window, batch_size = (len(traindata)- 2*skip_window - 1)*skip_size, num_skip= skip_size, skip_window= skip_window)
 
+#Training process
+train_centers, train_labels = data.generate_batch(traindata, skip_window, batch_size = (len(traindata)- 2*skip_window - 1)*skip_size, num_skip= skip_size, skip_window= skip_window)
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
     num_epochs = 50
@@ -65,5 +66,6 @@ with tf.Session() as sess:
     final_nce_weights = nce_weights.eval()
     final_nce_biases = nce_biases.eval()
 
-with open('embeddings3.pkl', 'wb') as f:
+#Saving anything
+with open('embeddings.pkl', 'wb') as f:
     pickle.dump([final_embeddings_normal, final_embeddings, final_nce_weights, final_nce_biases, word2idx], f)
