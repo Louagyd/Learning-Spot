@@ -1,1 +1,1 @@
-
+you shoud download the training data from [Here](https://github.com/watsonyanghx/CNN_LSTM_CTC_Tensorflow/issues/2) and then extract it to **image_set_train**. so the this folder should contain a folder named **image_set_train** and in that folder you should have 100,000 png images and a text file named labels.txt that has the target data.
