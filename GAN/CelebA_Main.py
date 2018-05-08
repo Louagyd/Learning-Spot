@@ -32,3 +32,9 @@ celeba_gan = GAN.GAN(all_images, z_len = 100, z_sd = 1, init_sd = 0.02,
 celeba_gan.train(num_epoch=15,batch_size = 32, batch_multiplication=1.1, lr_dis_init = 0.0005, lr_gen_init = 0.0005, lr_decay = 0.95, log_percent = 0.1,
                  verbose = 1, verbose_num_images=10, verbose_path='CelebA_Results/Training')
 celeba_gan.save('Models/CelebA_DCGAN/Model')
+
+celeba_gan.load('Models/CelebA_DCGAN/Model')
+images_gallery = clv.generate_face(celeba_gan, 20, verbose=1, verbose_gallery=[5, 4], return_gallery=True)
+plt.imsave('CelebA_Results/faces.png', images_gallery)
+clv.generate_translation_gif(celeba_gan, num_translations=5, path='CelebA_Results/Translation_Gif.gif')
+clv.show_visualization_form(celeba_gan, 27, 100)
