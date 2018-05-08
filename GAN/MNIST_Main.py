@@ -29,8 +29,8 @@ mnist_gan = GAN.GAN(images_mnist, targets=targets_one_hot, z_len = 100, z_sd = 1
                     dis_stride_size = [2,2])
 mnist_gan.train(num_epoch = 20, verbose = 1, verbose_num_images = 5, verbose_path = 'MNIST_Results/Training',
                 batch_size = 16, lr_dis_init = 0.0005, lr_gen_init = 0.0005, lr_decay = 0.97, log_percent = 0.1, gen_dis_ratio = 1)
-mnist_gan.save(path='Models/MNIST-cGAN/Model')
-mnist_gan.load(path='Models/MNIST-cGAN/Model')
+mnist_gan.save(path='Models/MNIST_cGAN/Model')
+mnist_gan.load(path='Models/MNIST_cGAN/Model')
 generated_images = mnv.generate_images_using_numbers(mnist_gan, [1,5,4,7,9], verbose=1)
 gallery = mnv.images_table(mnist_gan, verbose=1)
 plt.imsave('MNIST_Results/generated_numbers_table.png', gallery[:,:,0])
