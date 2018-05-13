@@ -42,3 +42,7 @@ you can save the trained model by **GAN.save()** function, and also load a train
 | ![](MNIST_Results/Translation_Gif.gif) | 
 |:--:| 
 | *a translation between 4 and 7* |
+
+| ![](MNIST_Results/Count_Gif.gif) | 
+|:--:| 
+| *count from 0 to 9* |
