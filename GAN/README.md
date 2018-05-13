@@ -56,3 +56,11 @@ you can save the trained model by **GAN.save()** function, and also load a train
 | ![](CelebA_Results/Training/Training.gif) | 
 |:--:| 
 | *generated faces after each epoch.* |
+
+| ![](CelebA_Results/face.png) | 
+|:--:| 
+| *some generated faces.* |
+
+| ![](CelebA_Results/Translation_Gif.gif) | 
+|:--:| 
+| *translation between 5 faces.* |
