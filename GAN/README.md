@@ -1,4 +1,4 @@
-#GAN
+# GAN
 the popular generative adversarial network for generating images based on a training data with python and tensorflow.
 
 ## Description of each file:
