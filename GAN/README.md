@@ -31,5 +31,6 @@ you can save the trained model by **GAN.save()** function, and also load a train
 
 ### MNIST
 
-![](MNIST_Results/generated_numbers_table.png)
-*table of some generated numbers*
+| ![space-1.jpg](MNIST_Results/generated_numbers_table.png) | 
+|:--:| 
+| *table of generated numbers* |
