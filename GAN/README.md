@@ -50,3 +50,9 @@ you can save the trained model by **GAN.save()** function, and also load a train
 | ![](MNIST_Results/Count_Gif.gif) | 
 |:--:| 
 | *count from 0 to 9* |
+
+### CelebA
+
+| ![](CelebA_Results/Training/Training.gif) | 
+|:--:| 
+| *generated faces after each epoch.* |
